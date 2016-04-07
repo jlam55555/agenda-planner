@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #C5EFF7;
+  color: #222222;
+  font-family: raleway;
+  font-size: 16px;
+  overflow: auto;
+}
+body {
+  max-width: 10in;
+  height: auto;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 20px #444444;
+  margin: 40px auto;
+  padding: 40px;
+}
+h1#title {
+  font-size: 50px;
+  margin: 0;
+}
+h2.subjectTitle {
+  font-size: 32px;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+h3.assignmentTitle {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+p.assignmentDescription {
+  margin-top: 10px;
+}
+ul {
+  list-style: none;
+  overflow: auto;
+}
+ul#subjectList li {
+  position: relative;
+}
+ul#subjectList li::before {
+  font-family: fontawesome;
+  content: "\f0a9";
+  display: inline-block;
+  position: absolute;
+  font-size: 32px;
+  left: -40px;
+  transform: rotate(90deg);
+  transition: all .5s;
+}
+ul#subjectList li:hover::before {
+  color: #27ae60;
+}
+ul.assignmentList {
+  margin-top: -10px;
+}
+ul.assignmentList li::before {
+  content: "\f148" !important;
+  font-size: 20px !important;
+  left: -25px !important;
+}
+li.closed::before {
+  transform: rotate(0deg) !important;
+}
+input, button, textarea {
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  transition: all .2s;
+}
+button:hover {
+  color: #2980b9;
+}
+button.fa-remove:hover {
+  color: #c0392b;
+}
+textarea {
+  width: 100%;
+  height: 50px;
+}
+input#importBox {
+  display: none;
+  transition: none;
+  width: 100%;
+  margin-top: 20px;
+}
